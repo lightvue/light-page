@@ -1,75 +1,61 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        nuxt_template
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <page-section>
+      <div class="dummy-block"></div>
+    </page-section>
+    <page-section class="--dark-bg">
+      <div class="dummy-block --x4"></div>
+    </page-section>
+    <page-section>
+      <div class="dummy-block --x5"></div>
+    </page-section>
+    <page-section class="--light-bg">
+      <div class="dummy-block --x2"></div>
+    </page-section>
+    <page-section>
+      <div class="dummy-block --x6"></div>
+    </page-section>
+    <page-section class="--dark-bg">
+      <div class="dummy-block --x3"></div>
+    </page-section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import PageSection from '@/components/PageSection.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { PageSection },
+})
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss">
+.--dark-bg {
+  background-color: $color-bg-blue;
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.--light-bg {
+  background-color: $color-bg-light;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.dummy-block {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &.--x2 {
+    height: 200px;
+  }
+  &.--x3 {
+    height: 300px;
+  }
+  &.--x4 {
+    height: 400px;
+  }
+  &.--x5 {
+    height: 500px;
+  }
+  &.--x6 {
+    height: 600px;
+  }
 }
 </style>
