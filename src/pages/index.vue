@@ -38,12 +38,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import PageSection from '@/components/PageSection.vue'
+import Vue from 'vue';
+import PageSection from '@/components/PageSection.vue';
 
 export default Vue.extend({
   components: { PageSection },
-})
+});
 </script>
 
 <style lang="scss">

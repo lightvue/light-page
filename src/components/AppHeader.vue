@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import PageSection from './PageSection.vue'
+import PageSection from './PageSection.vue';
 export default {
   components: { PageSection },
-}
+};
 </script>
 
 <style lang="scss">
