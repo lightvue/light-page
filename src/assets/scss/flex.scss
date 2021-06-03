@@ -1,0 +1,19 @@
+.flex-row {
+  display: flex;
+  align-items: center;
+  &.--jc-space-between {
+    justify-content: space-between;
+  }
+  &.--jc-space-around {
+    justify-content: space-around;
+  }
+  &.--wrap {
+    flex-wrap: wrap;
+  }
+  &.--no-wrap {
+    flex-wrap: nowrap;
+  }
+  .flex-item {
+    flex: 1 1 0;
+  }
+}

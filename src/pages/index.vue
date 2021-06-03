@@ -7,16 +7,25 @@
       <div class="dummy-block --x4"></div>
     </page-section>
     <page-section>
-      <div class="dummy-block --x5"></div>
+      <div class="flex-row --wrap dummy-flex-row">
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+      </div>
     </page-section>
-    <page-section class="--light-bg">
+    <page-section :fullWidth="true" class="--light-bg">
       <div class="dummy-block --x2"></div>
     </page-section>
     <page-section>
       <div class="dummy-block --x6"></div>
     </page-section>
     <page-section class="--dark-bg">
-      <div class="dummy-block --x3"></div>
+      <div class="flex-row --wrap dummy-flex-row">
+        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
+      </div>
     </page-section>
   </div>
 </template>
@@ -57,5 +66,12 @@ export default Vue.extend({
   &.--x6 {
     height: 600px;
   }
+}
+.dummy-flex-row {
+  margin: -16px;
+}
+.dummy-flex-item {
+  margin: 16px;
+  min-width: 268px;
 }
 </style>

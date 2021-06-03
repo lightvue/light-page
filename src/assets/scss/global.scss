@@ -1,3 +1,5 @@
+@import './flex.scss';
+
 *,
 *::before,
 *::after {
@@ -14,7 +16,7 @@
     max-width: $page-max-width;
     margin: auto;
     position: relative;
-    padding: 30px;
+    padding: $section-padding-default;
     &.--full-width {
       max-width: 100%;
     }
