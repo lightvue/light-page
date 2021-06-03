@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-section>
+    <page-section paddingY="8px">
       <div class="dummy-block"></div>
     </page-section>
     <page-section class="--dark-bg">
