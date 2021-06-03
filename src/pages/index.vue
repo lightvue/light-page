@@ -1,8 +1,5 @@
 <template>
   <div>
-    <page-section paddingY="8px">
-      <div class="dummy-block"></div>
-    </page-section>
     <page-section class="--dark-bg">
       <div class="dummy-block --x4"></div>
     </page-section>
@@ -21,10 +18,20 @@
     </page-section>
     <page-section class="--dark-bg">
       <div class="flex-row --wrap dummy-flex-row">
-        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
-        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
-        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
-        <div class="flex-item dummy-flex-item dummy-block --x2"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+      </div>
+    </page-section>
+    <page-section>
+      <div class="dummy-block --x4"></div>
+    </page-section>
+    <page-section class="--dark-bg">
+      <div class="flex-row --wrap dummy-flex-row">
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
       </div>
     </page-section>
   </div>

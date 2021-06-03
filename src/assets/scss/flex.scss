@@ -1,10 +1,10 @@
 .flex-row {
   display: flex;
   align-items: center;
-  &.--jc-space-between {
+  &.--jc-between {
     justify-content: space-between;
   }
-  &.--jc-space-around {
+  &.--jc-around {
     justify-content: space-around;
   }
   &.--wrap {

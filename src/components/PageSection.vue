@@ -1,5 +1,6 @@
 <template>
-  <section class="page-section">
+  <section class="page-section" :class="{ '--allow-overflow': overflow }">
+    <slot name="prepend"></slot>
     <div
       class="section-content"
       :class="{ '--full-width': fullWidth }"
@@ -11,6 +12,7 @@
     >
       <slot></slot>
     </div>
+    <slot name="append"></slot>
   </section>
 </template>
 
@@ -18,6 +20,11 @@
 export default {
   props: {
     fullWidth: {
+      type: Boolean,
+      default: false,
+    },
+    overflow: {
+      // default overflow-y will gets disturbed.
       type: Boolean,
       default: false,
     },
