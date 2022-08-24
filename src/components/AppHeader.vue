@@ -1,5 +1,5 @@
 <template>
-  <page-section class="app-header__wrap" paddingY="0px">
+  <wrapper :class="['app-header__wrap']" :paddingY="paddingY">
     <div class="app-header flex-row --jc-between">
       <div class="app-header__logo-wrap">App Logo</div>
       <div class="app-header__center"></div>
@@ -9,13 +9,42 @@
         <div class="dummy-action-item"></div>
       </div>
     </div>
-  </page-section>
+  </wrapper>
 </template>
 
 <script>
-import PageSection from './PageSection.vue';
+import Wrapper from './Wrapper.vue';
 export default {
-  components: { PageSection },
+  components: { Wrapper },
+  data() {
+    return {
+      paddingY: '20px',
+      properties: {
+        fullWidth: 'false',
+        overflow: 'true',
+        padding: '20px',
+        paddingY: '20px',
+        paddingTop: '20px',
+        paddingBottom: '20px',
+      },
+    };
+  },
+  provide() {
+    return {
+      wrapper: this.properties,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      console.log('called');
+      this.paddingY = '100px';
+    }, 3000);
+  },
+  // data() {
+  //   return {
+  //     py: '0px',
+  //   };
+  // },
 };
 </script>
 
@@ -25,7 +54,7 @@ export default {
   left: 0px;
   top: 0px;
   z-index: 101;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: -4px 4px 6px -4px rgba(0, 0, 0, 0.15);
 }
 .app-header {

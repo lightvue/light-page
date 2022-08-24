@@ -1,13 +1,13 @@
 <template>
-  <section class="page-section" :class="{ '--allow-overflow': overflow }">
+  <section class="page-section" :class="{ '--allow-overflow': this.pageSection.overflow }">
     <slot name="prepend"></slot>
     <div
       class="section-content"
-      :class="{ '--full-width': fullWidth }"
+      :class="{ '--full-width': this.pageSection.fullWidth }"
       :style="{
-        padding: padding,
-        paddingTop: paddingY || paddingTop,
-        paddingBottom: paddingY || paddingBottom,
+        padding: this.pageSection.padding,
+        paddingTop: this.pageSection.paddingY || this.pageSection.paddingTop,
+        paddingBottom: this.pageSection.paddingY || this.pageSection.paddingBottom,
       }"
     >
       <slot></slot>
@@ -18,28 +18,17 @@
 
 <script>
 export default {
-  props: {
-    fullWidth: {
-      type: Boolean,
-      default: false,
-    },
-    overflow: {
-      // default overflow-y will gets disturbed.
-      type: Boolean,
-      default: false,
-    },
-    padding: {
-      type: String,
-    },
-    paddingY: {
-      type: String,
-    },
-    paddingTop: {
-      type: String,
-    },
-    paddingBottom: {
-      type: String,
-    },
-  },
+  inject: ['pageSection'],
+  // methods: {
+  //   checkProp(prop, arg) {
+  //     // this.count++;
+  //     // console.log(this.count, ++this.count);
+  //     console.log('called');
+  //     // console.log(this[prop]);
+  //     console.log(this.pageSection);
+  //     // this[prop] === undefined ? (this.pageSection[prop] === '' ? arg : this.pageSection[prop]) : this[prop];
+  //     return this[prop];
+  //   },
+  // },
 };
 </script>
