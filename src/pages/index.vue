@@ -16,11 +16,10 @@
     <page-section>
       <div class="dummy-block --x6"></div>
     </page-section>
-    <page-section class="--dark-bg">
+    <page-section fullWidth padding="0px" class="--dark-bg">
       <div class="flex-row --wrap dummy-flex-row">
-        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
-        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
-        <div class="flex-item dummy-flex-item dummy-block --x3"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3 image-cont"></div>
+        <div class="flex-item dummy-flex-item dummy-block --x3 text-cont"></div>
       </div>
     </page-section>
     <page-section>
@@ -75,10 +74,29 @@ export default Vue.extend({
   }
 }
 .dummy-flex-row {
-  margin: -16px;
+  gap: 16px;
 }
 .dummy-flex-item {
-  margin: 16px;
   min-width: 268px;
+}
+.text-cont {
+  padding-top: 16px;
+  padding-bottom: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
+  max-width: 600px;
+  // background: #143a56;
+}
+
+@media screen and (min-width: 552px) {
+  .image-cont {
+    max-width: 50%;
+  }
+  .text-cont {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 32px;
+    padding-left: 16px;
+  }
 }
 </style>

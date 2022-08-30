@@ -12,3 +12,10 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+:root {
+  --overflow-default: initial !important;
+  --fullwidth-default: 100%;
+  --padding-default: 32px;
+  --margin-default: auto;
+}

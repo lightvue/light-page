@@ -8,6 +8,14 @@
         padding: padding,
         paddingTop: paddingY || paddingTop,
         paddingBottom: paddingY || paddingBottom,
+
+        paddingLeft: paddingX || paddingLeft,
+        paddingRight: paddingX || paddingRight,
+        margin: margin,
+        marginTop: marginY || marginTop,
+        marginBottom: marginY || marginBottom,
+        marginLeft: marginX || marginLeft,
+        marginRight: marginX || marginRight,
       }"
     >
       <slot></slot>
@@ -38,6 +46,37 @@ export default {
       type: String,
     },
     paddingBottom: {
+      type: String,
+    },
+
+    paddingLeft: {
+      type: String,
+    },
+    paddingRight: {
+      type: String,
+    },
+    paddingX: {
+      type: String,
+    },
+    margin: {
+      type: String,
+    },
+    marginY: {
+      type: String,
+    },
+    marginTop: {
+      type: String,
+    },
+    marginBottom: {
+      type: String,
+    },
+    marginLeft: {
+      type: String,
+    },
+    marginRight: {
+      type: String,
+    },
+    marginX: {
       type: String,
     },
   },

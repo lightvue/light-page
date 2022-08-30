@@ -18,17 +18,21 @@ body {
   max-width: 100%;
   position: relative;
   overflow-x: auto;
+
   &.--allow-overflow {
-    overflow: initial !important;
+    overflow: var(--overflow-default);
   }
+
   .section-content {
     width: 100%;
     max-width: $page-max-width;
-    margin: auto;
+    margin: var(--margin-default);
     position: relative;
-    padding: $section-padding-default;
+    // padding: $section-padding-default;
+    padding: var(--padding-default);
+
     &.--full-width {
-      max-width: 100%;
+      max-width: var(--fullwidth-default);
     }
   }
 }
